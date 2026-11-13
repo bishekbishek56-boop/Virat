@@ -34,7 +34,7 @@ DEFAULT_PRICING = {
     ],
 }
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=".")
 app.secret_key = os.environ.get("SECRET_KEY", secrets.token_hex(32))
 app.config["MAX_CONTENT_LENGTH"] = 200 * 1024 * 1024  # 200MB upload
 
